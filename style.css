@@ -1,0 +1,41 @@
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    background: #080E13;
+}
+
+.logo{
+    position: absolute;
+    left: 22px;
+    top: 7px;
+    width: 50px;
+    height: 50px;
+}
+
+.title{
+
+    /* sets distance for spacing */
+    position: absolute;
+    left: 91px;
+    top: -20px;
+    width: 424px;
+    height: 42px;
+    flex-shrink: 0; 
+
+
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Space Grotesk";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+
+}
