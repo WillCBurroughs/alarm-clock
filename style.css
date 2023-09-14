@@ -39,3 +39,57 @@
 
 
 }
+
+
+/* Sets style of Main Classes (Main section of information) */
+
+.main {
+
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    z-index: -1;
+    background: #EFF2F5;
+
+}
+
+.footer {
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    height: 73px;
+    width: 100%;
+    flex-shrink: 0;
+
+    z-index: 1; 
+    background: #080E13;
+
+}
+
+.bottom {
+
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+}
+
+.bottom-Text{
+
+    left: 21px;
+    bottom: 0px;
+
+}
+
+.rights-Reserved {
+
+    bottom: 0px;
+    right: 9px;
+
+}
