@@ -178,10 +178,10 @@
 
 .goBack {
 
-    position: relative;
+    position: absolute;
 
-    top: 105px;
-    left: 22px;
+    top: 605px;
+    left: 91px;
     width: 300px;
     height: 100px;
 
@@ -195,8 +195,8 @@
 .goBackText{
 
     position: relative;
-    left: 63px;
-    top: 16px;
+    left: 73px;
+    top: -8px;
 
     width: 182px;
     height: 74px;
@@ -207,5 +207,165 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+}
+
+.holdTopBlack {
+
+    position: absolute;
+
+    top: 100px;
+    left: 91px;
+    width: 784px;
+    height: 75px;
+    border-radius: 20px 20px 0px 0px;
+    background: #171515;
+    z-index: 1;
+}
+
+.holdTopBlackTitle {
+
+    position: relative;
+
+    left: 23px;
+    top: -20px; 
+
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.largeBackground {
+
+    position: absolute; 
+
+    width: 784px;
+    height: 396px;
+    left: 91px;
+    top: 100px;
+    border-radius: 40px;
+    background: #D9D9D9;
+
+}
+
+/* Holds time we want to put in */
+.holdSetTime {
+
+    position: absolute; 
+    top: 215px; 
+    left: 155px; 
+
+    width: 656px;
+    height: 135px;
+
+    border-radius: 30px;
+    background: #1E1E1E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.setTimeToUse{
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    position: relative;
+
+    left: 160px; 
+    top: 15px; 
+
+    color: #FFF;
+    font-family: "Space Mono";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+
+}
+/* Removes clock icon */
+.setTimeToUse::-webkit-calendar-picker-indicator {
+    display: none; /* Hide the clock icon on WebKit browsers (Safari, Chrome) */
+  }
+
+.uploadNewSoundBtn {
+    position: absolute; 
+
+    left: 155px; 
+    top: 375px; 
+
+    width: 300px;
+    height: 100px;
+
+    border-radius: 30px;
+    background: rgb(100, 100, 100);
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.goToUploadScreen {
+
+    position: relative;
+
+    width: 212px;
+    height: 74px;
+
+    top: -12px;
+    left: 63px;
+
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+
+
+}
+
+.makeNewTime {
+    
+    position: absolute; 
+    
+    left: 511px; 
+    top: 375px; 
+    
+    width: 300px;
+    height: 100px;
+    
+    border-radius: 30px;
+    background: #1E1E1E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+
+}
+
+.makeNewTimeText {
+
+    position: relative;
+
+    width: 212px;
+    height: 74px;
+
+    top: -12px;
+    left: 63px;
+
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
 
 }
