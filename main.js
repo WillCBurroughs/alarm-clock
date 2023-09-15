@@ -1,6 +1,7 @@
 
 let timer;
 let secondTimer;
+let isToggled = true;
 
 let holdSetTimeBtn;
 let goBack;
@@ -159,27 +160,32 @@ function displayTimesInRows(timesArray) {
 
       rectangularDiv.setAttribute('data-time', timesArray[i]);
  
-    // Set an initial state (assuming "off")
-    let isToggled = true;
+      let isToggled = false;
 
-    // Attach a click event listener to the rectangular div
-    rectangularDiv.addEventListener('click', function () {
-      if (isToggled) {
-        // Toggle off: Move the circular div and change color
-        circularDiv.style.transform = 'translateX(0)';
-        rectangularDiv.style.backgroundColor = '#000000';
-        rectangularDiv.classList.add('on');
-      } else {
-        // Toggle on: Move the circular div and change background
-        circularDiv.style.transform = 'translateX(-30px)';
-        rectangularDiv.style.backgroundColor = '#D2CCCC';
-        rectangularDiv.classList.remove('on');
-      }
+      // Attach a click event listener to the rectangular div
+      rectangularDiv.addEventListener('click', function () {
+        if (isToggled) {
+          // Toggle off: Move the circular div and change color
+          circularDiv.style.transform = 'translateX(0)';
+          rectangularDiv.style.backgroundColor = '#D2CCCC';
+        } else {
+          // Toggle on: Move the circular div and change background
 
-      console.log(isToggled);
-      // Toggle the state
-      isToggled = !isToggled;
-    });
+          circularDiv.style.transform = 'translateX(30px)';
+          rectangularDiv.style.backgroundColor = '#000000';
+        }
+      
+        console.log(isToggled);
+        // Toggle the state
+        isToggled = !isToggled;
+      
+        // Add or remove 'on' class based on the toggle state
+        if (isToggled) {
+          rectangularDiv.classList.add('on');
+        } else {
+          rectangularDiv.classList.remove('on');
+        }
+      });
 
       // Sets class
       label.classList.add('storeItem');
