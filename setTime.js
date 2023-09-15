@@ -21,7 +21,7 @@ if (localStorage.getItem("timesSaved") === null) {
     // Sorting this. May use this functionality later for deletions and switching functions off 
     holdTimes.sort((a,b) => a - b)
 }
-
+// Everything should work now 
 function goBackToHome(){
     window.location.href = "index.html";
     console.log("I can read this");
