@@ -109,14 +109,66 @@ function displayTimesInRows(timesArray) {
       let label = document.createElement('label');
       label.textContent = timesArray[i];
   
+
       let newDelete = document.createElement("img");
       newDelete.src = "img/remove.png";
 
       // So we can reference and delete button
       newDelete.classList.add("deleteButton");
 
+    // Attach a click event listener to the delete button
+     newDelete.addEventListener("click", function () {
+        // Access the label textContent of the associated div
+        let labelText = label.textContent;
+  
+        // Find the index of the labelText in timesArray
+        let index = timesArray.indexOf(labelText);
+  
+        // If the labelText is found in timesArray, remove it
+        if (index !== -1) {
+          timesArray.splice(index, 1);
+          // Save the updated array to localStorage
+          localStorage.setItem("timesSaved", JSON.stringify(timesArray));
+          // Update display
+          displayTimesInRows(timesArray);
+        }
+      });
+
+      // Adds divs for swipe functionality
+      let rectangularDiv = document.createElement("div");
+      rectangularDiv.classList.add("rectangularDiv");
+
+      let circularDiv = document.createElement("div");
+      circularDiv.classList.add("circleDiv");
+
+      // For clicking rectangle and changing on/off state
+      rectangularDiv.appendChild(circularDiv);
+
+ 
+    // Set an initial state (assuming "off")
+    let isToggled = true;
+
+    // Attach a click event listener to the rectangular div
+    rectangularDiv.addEventListener('click', function () {
+      if (isToggled) {
+        // Toggle off: Move the circular div and change color
+        circularDiv.style.transform = 'translateX(0)';
+        rectangularDiv.style.backgroundColor = '#000000';
+      } else {
+        // Toggle on: Move the circular div and change background
+        circularDiv.style.transform = 'translateX(-30px)';
+        rectangularDiv.style.backgroundColor = '#D2CCCC';
+      }
+
+      console.log(isToggled);
+      // Toggle the state
+      isToggled = !isToggled;
+    });
+
       // Sets class
       label.classList.add('storeItem');
+
+      holdLabel.appendChild(rectangularDiv);
 
       holdLabel.appendChild(label);
 

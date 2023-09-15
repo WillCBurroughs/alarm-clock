@@ -432,7 +432,7 @@
     border-radius: 40px;
 
     left: -55px;
-    top: -30px;
+    top: -80px;
 
     display: inline-block;
 }
@@ -454,6 +454,32 @@
     width: 30px;
     height: 30px;
     left: -250px;
-    top: -50px;
+    top: -100px;
+
+}
+
+/* Will change color when clicked to toggle on/off state */
+.rectangularDiv{
+    position: relative;
+    width: 80px;
+    height: 51px;
+
+    left: 200px;
+    top: 10px;
+    border-radius: 50px;
+    background: #000000;
+}
+
+.circleDiv {
+
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    left: 30px;
+
+    /* Makes perfectly round */
+    border-radius: 50%;
+    background-color: #535658;
 
 }
