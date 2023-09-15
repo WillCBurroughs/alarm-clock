@@ -213,4 +213,3 @@ function displayTimesInRows(timesArray) {
 
 
 
-
