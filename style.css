@@ -142,3 +142,70 @@
     line-height: normal;
 
 }
+
+.createNewTimeBtn{
+
+    position: relative;
+
+    top: 105px;
+    left: 22px;
+    width: 300px;
+    height: 100px;
+
+    border-radius: 30px;
+    background: #1e1e1e;
+
+    z-index: 3;
+
+}
+
+.createTimeText {
+
+    position: relative;
+    left: 63px;
+    top: 16px;
+
+    width: 212px;
+    height: 74px;
+
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.goBack {
+
+    position: relative;
+
+    top: 105px;
+    left: 22px;
+    width: 300px;
+    height: 100px;
+
+    border-radius: 30px;
+    background: #1e1e1e;
+
+    z-index: 3;
+
+}
+
+.goBackText{
+
+    position: relative;
+    left: 63px;
+    top: 16px;
+
+    width: 182px;
+    height: 74px;
+
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
