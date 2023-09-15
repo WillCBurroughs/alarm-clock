@@ -2,6 +2,16 @@
 // Allows for values to persist
 let holdTimes;
 
+let moveToSetAudio; 
+
+moveToSetAudio = document.querySelector(".uploadNewSoundBtn");
+
+moveToSetAudio.addEventListener("click", function() {
+
+        window.location.href = "setTime.html";
+
+});
+
 // Check if 'timesSaved' exists in localStorage
 if (localStorage.getItem("timesSaved") === null) {
     holdTimes = []; // Initialize as an empty array if it doesn't exist
