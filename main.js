@@ -99,12 +99,20 @@ function displayTimesInRows(timesArray) {
     largeGrayHolder.innerHTML = '';
   
     for (let i = 0; i < timesArray.length; i++) {
+
+      let holdLabel = document.createElement('div');
+
+      // Sets class for the label wrapper
+      holdLabel.classList.add('holdTimeFromArray');
+
       // Create a new label element
-      const label = document.createElement('label');
+      let label = document.createElement('label');
       label.textContent = timesArray[i];
   
       // Sets class
       label.classList.add('storeItem');
+
+      holdLabel.appendChild(label);
 
       // Create a new div for each row
       if (i % 3 === 0) {
@@ -117,7 +125,7 @@ function displayTimesInRows(timesArray) {
   
       // Append the label to the current row
       let currentRow = largeGrayHolder.querySelector('.row:last-child');
-      currentRow.appendChild(label);
+      currentRow.appendChild(holdLabel);
     }
   }
 
