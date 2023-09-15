@@ -432,7 +432,7 @@
     border-radius: 40px;
 
     left: -55px;
-    top: -30px;
+    top: -80px;
 
     display: inline-block;
 }
@@ -442,9 +442,51 @@
     background-color: #D9D9D9;
 
     margin-top: 20px;
+    margin-bottom: 10px;
     margin-left: 18px;
     width: 296px;
     height: 75px;
     border-radius: 40px;
 }
 
+
+
+.deleteButton{
+
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: -250px;
+    top: -100px;
+
+}
+
+/* Will change color when clicked to toggle on/off state */
+.rectangularDiv{
+    position: relative;
+    width: 80px;
+    height: 51px;
+
+    left: 200px;
+    top: 10px;
+    border-radius: 50px;
+    background: #D2CCCC;
+}
+
+.row{
+    margin-bottom: -25px;
+}
+
+.circleDiv {
+
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    left: 0px;
+
+    /* Makes perfectly round */
+    border-radius: 50%;
+    background-color: #535658;
+
+}
