@@ -1,4 +1,4 @@
-
+localStorage.clear();
 let timer;
 let secondTimer;
 

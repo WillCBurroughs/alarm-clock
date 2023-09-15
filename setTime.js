@@ -30,7 +30,7 @@ makeNewTimeButton.addEventListener("click", function() {
         holdTimes.push(holdValue.value);
         console.log(holdTimes);
         localStorage.setItem("timesSaved", JSON.stringify(holdTimes));
-
+        window.location.href = "index.html";
     }
 });
 
