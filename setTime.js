@@ -8,7 +8,7 @@ moveToSetAudio = document.querySelector(".uploadNewSoundBtn");
 
 moveToSetAudio.addEventListener("click", function() {
 
-        window.location.href = "setTime.html";
+        window.location.href = "uploadSound.html";
 
 });
 
