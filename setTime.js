@@ -2,6 +2,16 @@
 // Allows for values to persist
 let holdTimes;
 
+let moveToSetAudio; 
+
+moveToSetAudio = document.querySelector(".uploadNewSoundBtn");
+
+moveToSetAudio.addEventListener("click", function() {
+
+        window.location.href = "uploadSound.html";
+
+});
+
 // Check if 'timesSaved' exists in localStorage
 if (localStorage.getItem("timesSaved") === null) {
     holdTimes = []; // Initialize as an empty array if it doesn't exist
@@ -11,7 +21,7 @@ if (localStorage.getItem("timesSaved") === null) {
     // Sorting this. May use this functionality later for deletions and switching functions off 
     holdTimes.sort((a,b) => a - b)
 }
-
+// Everything should work now 
 function goBackToHome(){
     window.location.href = "index.html";
     console.log("I can read this");
