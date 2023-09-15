@@ -367,5 +367,70 @@
     font-weight: 700;
     line-height: normal;
 
+}
+
+.largeSavingValuesBox {
+
+    position: absolute;
+    left: 22px;
+    top: 473px;
+
+    width: 950px;
+    height: 254px; 
+
+    border-radius: 20px;
+    background: #1E1E1E;
 
 }
+
+.timesSaving{
+
+    position: relative;
+
+    top: -20px;
+    left: 22px;
+
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.largeGrayHolder {
+
+    position: relative;
+
+    top: -40px;
+    width: 951px;
+    height: 241px; 
+
+    border-radius: 20px;
+    background: #7B7A7A;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Sets how stored items will be displayed */
+
+.storeItem {
+
+    position: relative;
+    color: #1E1E1E;
+    font-family: "Space Mono";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding: 20px;
+    padding-left: 100px;
+    
+    margin: 20px;
+    border-radius: 40px;
+
+    display: inline-block;
+}
+

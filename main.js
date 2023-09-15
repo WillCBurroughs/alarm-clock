@@ -64,6 +64,10 @@ function showSetTime(){
 // Tests if value is made 
 if(localStorage.getItem("timesSaved") !== null){
 
+    // Will call function to create time element for each element
+    let storeArray = JSON.parse(localStorage.getItem("timesSaved"));
+    displayTimesInRows(storeArray);
+
     secondTimer = setInterval(() => {
         checkDate()
 }, 1000)
@@ -87,6 +91,35 @@ function checkDate(){
     }
 
 }
+
+function displayTimesInRows(timesArray) {
+    let largeGrayHolder = document.querySelector('.largeGrayHolder');
+  
+    // Clear the existing content in largeGrayHolder
+    largeGrayHolder.innerHTML = '';
+  
+    for (let i = 0; i < timesArray.length; i++) {
+      // Create a new label element
+      const label = document.createElement('label');
+      label.textContent = timesArray[i];
+  
+      // Sets class
+      label.classList.add('storeItem');
+
+      // Create a new div for each row
+      if (i % 3 === 0) {
+        const row = document.createElement('div');
+        row.classList.add('row'); // You can style the row using CSS
+  
+        // Append the row to largeGrayHolder
+        largeGrayHolder.appendChild(row);
+      }
+  
+      // Append the label to the current row
+      let currentRow = largeGrayHolder.querySelector('.row:last-child');
+      currentRow.appendChild(label);
+    }
+  }
 
 
 
