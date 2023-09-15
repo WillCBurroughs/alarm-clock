@@ -1,5 +1,6 @@
-
+localStorage.clear();
 let timer;
+let secondTimer;
 
 let holdSetTimeBtn;
 let goBack;
@@ -60,8 +61,73 @@ function showSetTime(){
     
 }
 
+// Tests if value is made 
+if(localStorage.getItem("timesSaved") !== null){
 
+    // Will call function to create time element for each element
+    let storeArray = JSON.parse(localStorage.getItem("timesSaved"));
+    displayTimesInRows(storeArray);
 
+    secondTimer = setInterval(() => {
+        checkDate()
+}, 1000)
+
+}
+
+function checkDate(){
+
+    let date = new Date(); 
+    let holdhours = date.getHours();
+    if(holdhours < 9){
+        holdhours = String("0" + holdhours);
+    }
+    let holdArray = JSON.parse(localStorage.getItem("timesSaved"));
+    let holdMins = date.getMinutes();
+    let holdHoursAndMins = String(holdhours + ":" + holdMins);
+    console.log(holdHoursAndMins);
+    
+    if(holdArray.includes(holdHoursAndMins)){
+        window.location.href = "alarmTriggered.html";
+    }
+
+}
+
+function displayTimesInRows(timesArray) {
+    let largeGrayHolder = document.querySelector('.largeGrayHolder');
+  
+    // Clear the existing content in largeGrayHolder
+    largeGrayHolder.innerHTML = '';
+  
+    for (let i = 0; i < timesArray.length; i++) {
+
+      let holdLabel = document.createElement('div');
+
+      // Sets class for the label wrapper
+      holdLabel.classList.add('holdTimeFromArray');
+
+      // Create a new label element
+      let label = document.createElement('label');
+      label.textContent = timesArray[i];
+  
+      // Sets class
+      label.classList.add('storeItem');
+
+      holdLabel.appendChild(label);
+
+      // Create a new div for each row
+      if (i % 3 === 0) {
+        const row = document.createElement('div');
+        row.classList.add('row'); // You can style the row using CSS
+  
+        // Append the row to largeGrayHolder
+        largeGrayHolder.appendChild(row);
+      }
+  
+      // Append the label to the current row
+      let currentRow = largeGrayHolder.querySelector('.row:last-child');
+      currentRow.appendChild(holdLabel);
+    }
+  }
 
 
 
