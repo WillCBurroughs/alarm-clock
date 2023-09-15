@@ -86,9 +86,22 @@ function checkDate(){
     let holdHoursAndMins = String(holdhours + ":" + holdMins);
     console.log(holdHoursAndMins);
     
-    if(holdArray.includes(holdHoursAndMins)){
-        window.location.href = "alarmTriggered.html";
-    }
+    if (holdArray.includes(holdHoursAndMins)) {
+
+        // ckecking selected timer
+        let slider = document.querySelector(`[data-time="${holdHoursAndMins}"]`);
+        
+        // Check if toggled on 
+        if (holdArray.includes(holdHoursAndMins)) {
+            // Checking selected timer
+            let slider = document.querySelector(`[data-time="${holdHoursAndMins}"]`);
+            
+            // Check if the slider is in the "on" state
+            if (slider && slider.classList.contains('on')) {
+                window.location.href = "alarmTriggered.html";
+            }
+        }
+      }
 
 }
 
@@ -144,6 +157,7 @@ function displayTimesInRows(timesArray) {
       // For clicking rectangle and changing on/off state
       rectangularDiv.appendChild(circularDiv);
 
+      rectangularDiv.setAttribute('data-time', timesArray[i]);
  
     // Set an initial state (assuming "off")
     let isToggled = true;
@@ -154,10 +168,12 @@ function displayTimesInRows(timesArray) {
         // Toggle off: Move the circular div and change color
         circularDiv.style.transform = 'translateX(0)';
         rectangularDiv.style.backgroundColor = '#000000';
+        rectangularDiv.classList.add('on');
       } else {
         // Toggle on: Move the circular div and change background
         circularDiv.style.transform = 'translateX(-30px)';
         rectangularDiv.style.backgroundColor = '#D2CCCC';
+        rectangularDiv.classList.remove('on');
       }
 
       console.log(isToggled);
