@@ -1,6 +1,9 @@
 
 let timer;
 
+let holdSetTimeBtn;
+let goBack;
+
 // Getting divs to be displayed 
 let homePage = document.querySelector(".holdMainScreen");
 let holdTimePage = document.querySelector(".holdSetTimeScreen");
@@ -10,21 +13,13 @@ let holdUpload = document.querySelector(".uploadSound");
 let holdAlarmPage = document.querySelector(".holdAlarmScreen");
 
 
-// First off setting only the main homepage to be visible when downloaded 
-function showMain(){
-    // Show the main page
-    homePage.style.display = "visible";
 
-    // Hide the other pages
-    holdTimePage.style.display = "none";
-    holdUpload.style.display = "none";
-    holdAlarmPage.style.display = "none";
 
-}
+ // querySelectors for this page need to be recalled now
+holdSetTimeBtn = document.querySelector(".createNewTimeBtn");
 
-// When loading in page we will remove everything other than main Page 
-showMain(); 
-
+// Goes to next page 
+holdSetTimeBtn.addEventListener("click", showSetTime);
 
 // Holds time we will use 
 let holdDate = document.querySelector(".currentDate");
@@ -55,8 +50,18 @@ setDate();
 // Calls the date every second allows us to keep time 
 timer = setInterval(() => {
              setDate()
-  
 }, 1000)
+
+
+// Moves to set time screen
+function showSetTime(){
+
+    window.location.href = "setTime.html";
+    
+}
+
+
+
 
 
 
