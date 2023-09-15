@@ -448,3 +448,12 @@
     border-radius: 40px;
 }
 
+.deleteButton{
+
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: -250px;
+    top: -50px;
+
+}

@@ -1,4 +1,4 @@
-localStorage.clear();
+
 let timer;
 let secondTimer;
 
@@ -109,10 +109,18 @@ function displayTimesInRows(timesArray) {
       let label = document.createElement('label');
       label.textContent = timesArray[i];
   
+      let newDelete = document.createElement("img");
+      newDelete.src = "img/remove.png";
+
+      // So we can reference and delete button
+      newDelete.classList.add("deleteButton");
+
       // Sets class
       label.classList.add('storeItem');
 
       holdLabel.appendChild(label);
+
+      holdLabel.appendChild(newDelete);
 
       // Create a new div for each row
       if (i % 3 === 0) {
