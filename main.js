@@ -1,5 +1,6 @@
 
 let timer;
+let secondTimer;
 
 let holdSetTimeBtn;
 let goBack;
@@ -60,8 +61,32 @@ function showSetTime(){
     
 }
 
+// Tests if value is made 
+if(localStorage.getItem("timesSaved") !== null){
 
+    secondTimer = setInterval(() => {
+        checkDate()
+}, 1000)
 
+}
+
+function checkDate(){
+
+    let date = new Date(); 
+    let holdhours = date.getHours();
+    if(holdhours < 9){
+        holdhours = String("0" + holdhours);
+    }
+    let holdArray = JSON.parse(localStorage.getItem("timesSaved"));
+    let holdMins = date.getMinutes();
+    let holdHoursAndMins = String(holdhours + ":" + holdMins);
+    console.log(holdHoursAndMins);
+    
+    if(holdArray.includes(holdHoursAndMins)){
+        window.location.href = "alarmTriggered.html";
+    }
+
+}
 
 
 
